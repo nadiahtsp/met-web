@@ -12,22 +12,22 @@ class PagesController extends Controller
     }
     public function about()
     {
-        return view("about");
+        return view("pages.about");
     }
     public function portfolio()
     {
-        return view("portfolio");
+        return view("pages.portfolio");
     }
     public function service()
     {
-        return view("service");
+        return view("pages.service");
     }
     public function carrer()
     {
-        return view("carrer");
+        return view("pages.carrer");
     }
     public function blog()
     {
-        return view("blog");
+        return view("pages.blog");
     }
 }

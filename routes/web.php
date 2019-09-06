@@ -36,6 +36,7 @@
 // });
 
 // Pake ini aja sayang biar bisa make controller, jadi pengembangannya lebih mudah
+// Semua file pages(dari about sampai service) aku masukin kedalam folder pages ya
 Route::get('/', 'PagesController@index');
 Route::get('/about', 'PagesController@about');
 Route::get('/portfolio', 'PagesController@portfolio');
@@ -47,7 +48,9 @@ Route::get('/blog', 'PagesController@blog');
 Route::get('/index-copy', function () {
     return view('pages-copy.index-copy');
 });
+// This is just testing
+Route::get('/test', 'HomeController@test')->name('test');
 
-Auth::routes(); 
+Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
