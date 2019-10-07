@@ -356,6 +356,7 @@ bootstrap.min.css:5 .navbar-toggle {
 
 #about .service-item {
     text-align: center;
+    
 }
 
 #pilar .service-item {
@@ -381,7 +382,7 @@ bootstrap.min.css:5 .navbar-toggle {
     line-height: 104px;
     border: 3px solid rgb(253, 238, 238);
     border-radius: 50%;
-    background-color: #f7c552;
+    background-color: #583697;
 }
 
 #about .service-item h4 {
@@ -423,11 +424,14 @@ bootstrap.min.css:5 .navbar-toggle {
 #about .service-item p {
     color: #fff;
     margin-top: 30px;
+    
 }
 
 #pilar .service-item p {
-    color: #000;
+    color: #fff;
     margin-top: 10px;
+    font-size: 70px;
+    padding: 25px;
 }
 
 #about .service-item .primary-blue-button {
@@ -538,6 +542,7 @@ section.dark .heading h3 {
     -ms-transform: scale(1.1);
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
+    cursor: pointer;
     /* -webkit-filter: grayscale(1); */
     /* transform: scale(1.01); */
 }

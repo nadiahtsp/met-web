@@ -21,16 +21,16 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="message-box">
-                    <h2>History</h2>
-                    <p class="lead"> Beginning in early 2019, MET started providing IT services. Our team is able to provide technology solutions with the best and trusted services for every partner.</p>
+                    <h2>{{$history[0]->title}}</h2>
+                    <p class="lead"> {{$history[0]->content}}</p>
 
-                    <p class="lead"> At present we are still focused on providing services in the health sector as well as support for maintenance to the integration of an enabling system. </p>
+                    <!-- <p class="lead"> At present we are still focused on providing services in the health sector as well as support for maintenance to the integration of an enabling system. </p> -->
                 </div><!-- end messagebox -->
             </div><!-- end col -->
 
             <div class="col-md-6">
                 <div class="post-media wow fadeIn">
-                    <img src="{{ asset('assets/img/about-bg.jpg') }}" alt="" class="img-responsive img-rounded">
+                    <img src="{{ asset('assets/img/'.$history[0]->gambar) }}" alt="" class="img-responsive img-rounded">
                     <a href="http://www.youtube.com/watch?v=nrJtHemSPW4" data-rel="prettyPhoto[gal]" class="playbutton"><i class="flaticon-play-button"></i></a>
                 </div><!-- end media -->
             </div><!-- end col -->
@@ -41,50 +41,22 @@
         <section id="pilar" class="page-section">
             <div class="container">
                 <div class="row">
-                    <h2>The 3 MET Pillars</h2>
+                    <h2>The 5 MET Pillars</h2>
+                    <div class="col-md-1">
+                    </div>
+                    @foreach($pilar as $pl)
                     <div class="col-md-2 col-sm-6 col-xs-12">
+                   
                         <div class="service-item">
                             <div class="icon">
-                                <img src="img/service_icon_01.png" alt="">
+                                <p>{{ $pl->nama }}</p>
                             </div>
-                            <h4>Smart Notifications</h4>
-
+                            <h4>{{ $pl->deskripsi }}</h4>
                         </div>
+                       
                     </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="service-item">
-                            <div class="icon">
-                                <img src="img/service_icon_02.png" alt="">
-                            </div>
-                            <h4>Lovely Web Design</h4>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-sm-6 col-xs-12">
-                        <div class="service-item">
-                            <div class="icon">
-                                <img src="img/service_icon_03.png" alt="">
-                            </div>
-                            <h4>Quick Support</h4>
-
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="service-item">
-                            <div class="icon">
-                                <img src="img/service_icon_04.png" alt="">
-                            </div>
-                            <h4>One-Click Setup</h4>
-
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-sm-6 col-xs-12">
-                        <div class="service-item">
-                            <div class="icon">
-                                <img src="img/service_icon_04.png" alt="">
-                            </div>
-                            <h4>One-Click Setup</h4>
-
-                        </div>
+                    @endforeach
+                    <div class="col-md-1">
                     </div>
                 </div>
             </div>
@@ -96,8 +68,9 @@
                     <h2 style="margin-bottom:30px;">Our Client</h2>
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="service-item">
-                            <img src="{{ asset('assets/img/logodepok.jpg') }}" style="width:15%" alt="">
-
+                            @foreach($client as $c)
+                            <img src="{{ asset('assets/img/'.$c->gambar) }}" style="width:15%;" alt="">
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -146,7 +119,7 @@
                                 <h5>Get Social with us</h5>
                                 <ul>
                                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                                     <li><a href="#"><i class="fa fa-google"></i></a></li>
                                     <li><a href="#"><i class="fa fa-rss"></i></a></li>
                                     <li><a href="#"><i class="fa fa-dribbble"></i></a></li>

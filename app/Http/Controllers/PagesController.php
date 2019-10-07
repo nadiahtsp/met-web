@@ -2,21 +2,47 @@
 
 namespace App\Http\Controllers;
 
+use App\General;
+use App\Testimoni;
+use App\Portfolio;
+
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
     public function index()
     {
-        return view("index");
+        $home = General::whereIn('id', [1, 2])->get();
+        $testimony = Testimoni::all();
+        $portfolio = Portfolio::all();
+        $service = \App\Service::all();
+        // dd($tagline);
+        return view("index", [
+            'home' => $home,
+            'testimony' => $testimony,
+            'portfolio' => $portfolio,
+            'service' => $service
+        ]);
+       
+        
     }
     public function about()
     {
-        return view("pages.about");
+        $history = \App\General::whereIn('id', [3])->get();
+        $client = \App\Client::all();
+        $pilar = \App\Pilar::all();
+        return view('pages.about', [
+            'history' => $history,
+            'client' => $client,
+            'pilar' => $pilar
+        ]);
     }
     public function portfolio()
     {
-        return view("pages.portfolio");
+        $portfolio = Portfolio::all();
+        return view('pages.portfolio', [
+            'portfolio' => $portfolio
+        ]);
     }
     public function service()
     {
@@ -24,7 +50,10 @@ class PagesController extends Controller
     }
     public function carrer()
     {
-        return view("pages.carrer");
+        $career = \App\Career::all();
+        return view('pages.carrer', [
+            'career' => $career
+        ]);
     }
     public function blog()
     {

@@ -57,7 +57,7 @@ http://www.templatemo.com/tm-506-tinker
                         <li><a href="{{url('about')}}" class="nav-link  ">About Us</a></li>
                         <li><a href="{{url('portfolio')}}" class="nav-link ">Portfolio</a></li>
                         <li><a href="{{url('service')}}" class="nav-link  ">Services</a></li>
-                        <li><a href="{{url('carrer')}}" class="nav-link ">Carrers</a></li>
+                        <li><a href="{{url('carrer')}}" class="nav-link ">Careers</a></li>
                         <li><a href="{{url('blog')}}" class="nav-link ">Blog</a></li>
                         <!-- <li>
                             <div class="dropdown">

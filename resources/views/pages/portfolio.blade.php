@@ -13,14 +13,15 @@
     <div class="container">
         <div class="row">
             <div class="span12">
+            @foreach($portfolio as $p)
                 <div class="row">
                     <div class="col-lg-12 col-md-12">
                         <div class="work">
                             <div class="hovereffect" style="width:40%">
-                                <img class="img-responsive" src="{{asset('assets/img/works-sipp kling.png') }}" alt="">
+                                <img class="img-responsive" src="{{ asset('assets/img/'.$p->gambar) }}" alt="">
                                 <div class="overlay">
-                                    <h2>SIPP-KLING</h2>
-                                    <a class="info" href="https://www.depok.go.id/04/10/2018/01-berita-depok/aplikasi-sipp-kling-permudah-pendataan-kesehatan-lingkungan">link here</a>
+                                    <h2>{{ $p->nama }}</h2>
+                                    <a class="info" href="{{ $p->link }}">link here</a>
                                 </div>
                             </div>
                         </div>
@@ -57,6 +58,7 @@
 
                 </div>
             </div>
+            @endforeach
         </div>
 
     </div><!-- end row -->
