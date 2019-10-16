@@ -38,9 +38,11 @@
     </div><!-- end container -->
 </div><!-- end section -->
 
+<!-- //portfolio -->
 <div id="portfolio1" class="section wb">
     <div class="container">
         <div class="row">
+       
             <div class="span12">
                 <div class="heading">
                     <h3><span>Our Works</span></h3>
@@ -61,35 +63,21 @@
                         </div>
                    </div> -->
                 <div class="row">
+                @foreach($portfolio as $p)
                     <div class="col-lg-12 col-md-12">
+                    
                         <div class="work">
                             <div class="hovereffect">
-                                <img class="img-responsive" src="{{asset('assets/img/works-sipp kling.png') }}" alt="">
+                                <img class="img-responsive" src="{{asset('assets/img/'.$p->gambar) }}" alt="">
                                 <div class="overlay">
-                                    <h2>SIPP-KLING</h2>
-                                    <a class="info" href="https://www.depok.go.id/04/10/2018/01-berita-depok/aplikasi-sipp-kling-permudah-pendataan-kesehatan-lingkungan">link here</a>
+                                    <h2>{{$p->nama}}</h2>
+                                    <a class="info" href="{{$p->link}}">link here</a>
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
-                    <!-- <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                        <div class="hovereffect">
-                            <img class="img-responsive" src="{{asset('assets/img/portfolio.jpg') }}" alt="">
-                            <div class="overlay">
-                                <h2>Hover effect 1</h2>
-                                <a class="info" href="#">link here</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                        <div class="hovereffect">
-                            <img class="img-responsive" src="{{asset('assets/img/portfolio.jpg') }}" alt="">
-                            <div class="overlay">
-                                <h2>Hover effect 1</h2>
-                                <a class="info" href="#">link here</a>
-                            </div>
-                        </div>
-                    </div>  -->
+                    @endforeach
                 </div>
             </div>
             <div class="row" style="text-align:center;">

@@ -22,33 +22,21 @@
             <div class="services-column">
                 <div class="content-outer">
                     <div class="row clearfix " style="text-align:left">
-
-                        <div class="service-block col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="inner-box">
+                        @foreach($service as $s)
+                        <div class="service-block col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <div class="inner-box  ">
                                 <div class="icon-box"><i class="fa fa-briefcase" aria-hidden="true"></i></div>
-                                <h4>SOFTWARE DEVELOPMENT</h4>
-                                <div class="text">Develop native web and mobile applications.
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="service-block col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="inner-box">
-                                <div class="icon-box"><i class="fa fa-bar-chart" aria-hidden="true"></i></div>
-                                <h4>PROJECT SERVICE</h4>
-                                <div class="text">Providing our products that put forward the benefits for its users.
+                               
+                                    <h4>{{$s->nama}}</h4>
+                                    <div class="text">{{$s->deskripsi}}
+                                    
                                 </div>
-                            </div>
-                        </div>
 
-                        <div class="service-block col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="inner-box">
-                                <div class="icon-box"><i class="fa fa-trophy" aria-hidden="true"></i></div>
-                                <h4>TECNOLOGY CONSULTING</h4>
-                                <div class="text">Providing consultations covering system analysis, network structure, network installation, and data processing.
-                                </div>
                             </div>
+                           
                         </div>
+                        @endforeach
 
                         <!-- <div class="service-block col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <div class="inner-box">

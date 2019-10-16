@@ -40,19 +40,26 @@ class PagesController extends Controller
     public function portfolio()
     {
         $portfolio = Portfolio::all();
+       
         return view('pages.portfolio', [
             'portfolio' => $portfolio
         ]);
     }
     public function service()
+
     {
-        return view("pages.service");
+        $service = \App\Service::all();
+
+        return view("pages.service",[  
+            'service' => $service
+            ]);
     }
     public function carrer()
     {
         $career = \App\Career::all();
         return view('pages.carrer', [
-            'career' => $career
+            'career' => $career,
+          
         ]);
     }
     public function blog()
