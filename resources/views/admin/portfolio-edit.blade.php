@@ -15,12 +15,12 @@
                                 {{ csrf_field() }}
                                 {{ method_field('PUT') }}
                                 <div class="form-group">
-                                    <label for="exampleInputName1">Title</label>
+                                    <label for="exampleInputName1">Portfolio</label>
                                     <input type="text" class="form-control" id="exampleInputName1" name="nama" value="{{ $portfolio->nama }}">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputName1">Title</label>
-                                    <input type="text" class="form-control" id="exampleInputName1" name="link" value="{{ $portfolio->link }}">
+                                    <label for="exampleInputName1">Description</label>
+                                    <textarea type="text" class="ckeditor" id="exampleInputName1" name="link" >{{ $portfolio->link }}</textarea>
                                 </div>
                                 
                                 <button type="submit" class="btn btn-success mr-2">Submit</button>

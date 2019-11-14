@@ -229,7 +229,7 @@ section.dark .sub-heading p {
 
 .navbar-inverse .navbar-toggle:hover,
 .navbar-inverse .navbar-toggle:focus {
-    background-color: #f7c552;
+    background-color: #000;
 }
 
 bootstrap.min.css:5 .navbar-toggle {
@@ -356,7 +356,7 @@ bootstrap.min.css:5 .navbar-toggle {
 
 #about .service-item {
     text-align: center;
-    
+
 }
 
 #pilar .service-item {
@@ -397,7 +397,7 @@ bootstrap.min.css:5 .navbar-toggle {
 #pilar h2 {
     margin-bottom: 50px;
     text-align: center;
-    
+
 }
 
 #pilar .service-item h4 {
@@ -424,7 +424,7 @@ bootstrap.min.css:5 .navbar-toggle {
 #about .service-item p {
     color: #fff;
     margin-top: 30px;
-    
+
 }
 
 #pilar .service-item p {
@@ -523,7 +523,7 @@ section.dark .heading h3 {
 .project-item {
     margin: 20px 0px 15px;
     padding: 20px;
-   
+
 }
 
 .thumb {
@@ -532,8 +532,8 @@ section.dark .heading h3 {
     background: #dadfe1
 }
 
-.thumb img{
- 
+.thumb img {
+
     transition: transform .5s ease;
 }
 
@@ -811,6 +811,7 @@ footer .location h4 {
     font-size: 15px;
     font-weight: 500;
     color: #fff;
+    margin-left: 0px !important;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin-bottom: 20px;
@@ -823,6 +824,8 @@ footer .location ul {
 footer .location ul li {
     font-size: 13px;
     color: #fff;
+    margin-left: 50px;
+    margin-top: 10px;
     display: inline-block;
     line-height: 24px;
     letter-spacing: 0.5px;
@@ -830,7 +833,7 @@ footer .location ul li {
     padding-bottom: 5px;
 }
 
-footer .location ul li h6 {
+footer .location h6 {
     font-size: 14px;
     color: #fff;
     display: inline-block;
@@ -839,11 +842,10 @@ footer .location ul li h6 {
     margin: 0px !important;
 }
 
-footer .location ul li:first-child {
+footer .location :first-child {
     margin-right: 15px;
-    margin-left: 50px;
+
     padding-right: 15px;
-    border-right: 1px solid rgba(250, 250, 250, 0.1);
 }
 
 
@@ -862,7 +864,7 @@ footer .connect-us ul li {
     margin-right: 5px;
 }
 
-footer .connect-us ul li a {
+footer .connect-us a {
     display: inline-block;
     width: 28px;
     height: 28px;
@@ -875,7 +877,7 @@ footer .connect-us ul li a {
     transition: all 0.3s;
 }
 
-footer .connect-us ul li a:hover {
+footer .connect-us a:hover {
     background-color: #583697;
 }
 
@@ -897,9 +899,10 @@ footer .contact-info ul li {
     line-height: 24px;
     letter-spacing: 0.5px;
     padding-top: 5px;
+
     padding-bottom: 5px;
     font-weight: 300;
-    margin-top: 0px;
+    margin-top: 10px;
 }
 
 footer .contact-info ul li em {
@@ -938,12 +941,14 @@ footer .contact-info ul li em {
 #contact-us .connect-us ul li a:hover {
     background-color: #583697;
 }
-.work{
-   text-align: center;
+
+.work {
+    text-align: center;
 }
+
 .hovereffect {
-    width: 25%;
-    height: 25%;
+    width: 300px;
+    height: 40%;
     margin: 0 auto;
     overflow: hidden;
     position: relative;

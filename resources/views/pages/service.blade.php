@@ -5,7 +5,7 @@
 <div class="parallax-content-about baner-content-about" id="home">
     <div class="container">
         <div class="text-content">
-            <h2><em style="font-size:60px">Services</em></h2>
+            <h2><em style="font-size:50px">Services</em></h2>
             <p style="color:#fff;margin-top:20px;font-size:16px">
                 We have a history of doing what our name implies, creating a visual language around the beliefs of the brands we work with.
             </p>
@@ -23,7 +23,7 @@
                 <div class="content-outer">
                     <div class="row clearfix " style="text-align:left">
                         @foreach($service as $s)
-                        <div class="service-block col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <div class="service-block col-lg-4 col-md-4 col-sm-12 col-xs-12">
                             <div class="inner-box  ">
                                 <div class="icon-box"><i class="fa fa-briefcase" aria-hidden="true"></i></div>
 
@@ -79,25 +79,26 @@
 <footer>
     <div class="container">
         <div class="row">
-            <div class="col-md-9 col-sm-12">
+            <div class="col-md-8 col-sm-12">
                 <div class="location">
                     <h4>Location</h4>
                     <ul>
                         <li>
-                            <h6> Head Office</h6> <br>Jl. Suci Susukan Ciracas No.7, Rt9/Rw4, <br>kel.Sususkan, Kec.Ciracas, <br> Jakarta Timur 13750
+                            <h6> Head Office</h6> <br>{{$profil[1]->title}} <br>{{$profil[1]->content}} <br>{{$profil[1]->additional}}
                         </li>
                         <li>
-                            <h6>Branch Office</h6> <br>Perumahan Taman Permata kav.8 Jl.H.Jeruk no.8 <br>Kel. Rambutan, Kec.Ciracas, <br>Jakarta Timur 13830
+                            <h6>Branch Office</h6><br>{{$profil[2]->title}} <br>{{$profil[2]->content}} <br>{{$profil[2]->additional}}
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-12">
+            <div class="col-md-4 col-sm-12">
                 <div class="contact-info">
                     <h4>Contact</h4>
                     <ul>
-                        <li><em>Phone</em>: 021-22094511
-                            <br><em>Email</em>: met.id@outlook.com</li>
+                        <li><em>Phone</em>: {{$profil[3]->content}}
+                        <br><em>Fax</em>: +6221 87792645
+                            <br><em>Email</em>: {{$profil[4]->content}}</br>
                     </ul>
                 </div>
                 <div class="row">
@@ -105,11 +106,9 @@
                         <div class="connect-us">
                             <h5>Get Social with us</h5>
                             <ul>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google"></i></a></li>
-                                <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                @foreach ($media as $m)
+                                <li><a href="{{$m->link}}"><i class="{{$m->logo}}"></i></a></li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>

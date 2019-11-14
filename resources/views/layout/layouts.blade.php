@@ -45,8 +45,8 @@ http://www.templatemo.com/tm-506-tinker
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="{{url('/')}}" class="navbar-brand">
-                        <img src="{{asset('assets/logo/logo_ET.png')}}" style="width:80px; height:80px;" alt="">
+                    <a href="{{url('/')}}" class="navbar-brand" style="padding: 18px 0px" >
+                        <img src="{{asset('assets/img/'.$profil[0]->gambar)}}" style="height:45px;" alt="">
                     </a>
                 </div>
                 <!--/.navbar-header-->
@@ -58,7 +58,7 @@ http://www.templatemo.com/tm-506-tinker
                         <li><a href="{{url('portfolio')}}" class="nav-link ">Portfolio</a></li>
                         <li><a href="{{url('service')}}" class="nav-link  ">Services</a></li>
                         <li><a href="{{url('carrer')}}" class="nav-link ">Careers</a></li>
-                        <li><a href="{{url('blog')}}" class="nav-link ">Blog</a></li>
+                        <li><a class="nav-link ">Blog</a></li>
                         <!-- <li>
                             <div class="dropdown">
                                 <button class="dropbtn" onclick="funDropdown()">Dropdown

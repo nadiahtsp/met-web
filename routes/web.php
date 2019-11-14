@@ -98,6 +98,8 @@ Route::get('/social-media','HomeController@media')->name('social-media');
 Route::get('/media-edit/{id}','HomeController@mediaedit');
 Route::get('/media-add','HomeController@mediaadd');
 
+//layout page
+Route::get('/profil', 'PagesController@layout')->name('layout');
 
 // Update General
 Route::put('/general/update/{id}', 'GeneralController@update');

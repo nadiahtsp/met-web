@@ -104,7 +104,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{url('profile-met')}}">
-              <i class="menu-icon mdi mdi-home"></i>
+              <i class="menu-icon mdi mdi-face-profile"></i>
               <span class="menu-title">Profile MET</span>
             </a>
           </li>
@@ -128,37 +128,37 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{url('service-admin')}}">
-              <i class="menu-icon mdi mdi-room-service"></i>
+              <i class="menu-icon mdi mdi-help-network"></i>
               <span class="menu-title">Services</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{url('career-admin')}}">
-              <i class="menu-icon mdi mdi-account-tie"></i>
+              <i class="menu-icon mdi mdi-worker"></i>
               <span class="menu-title">Careers</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{url('testimoni')}}">
-              <i class="menu-icon mdi mdi-card-text-outline"></i>
+              <i class="menu-icon mdi mdi-file-word"></i>
               <span class="menu-title">testimoni</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{url('pillar')}}">
-              <i class="menu-icon mdi mdi-office-building"></i>
+              <i class="menu-icon mdi mdi-pillar"></i>
               <span class="menu-title">Pilars</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{url('client')}}">
-              <i class="menu-icon mdi mdi-people"></i>
+              <i class="menu-icon mdi mdi-nature-people"></i>
               <span class="menu-title">Client</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{url('social-media')}}">
-              <i class="menu-icon mdi mdi-people"></i>
+              <i class="menu-icon mdi mdi-facebook"></i>
               <span class="menu-title">Social Media</span>
             </a>
           </li>

@@ -78,6 +78,7 @@ class GeneralController extends Controller
         $profile = \App\General::find($request->id);
         $profile->title = $request->title;
         $profile->content = $request->content;
+        $profile->additional = $request->additional;
         $profile->save();
         // dd($tagline);
         return redirect('/profile-met');

@@ -196,6 +196,7 @@ class HomeController extends Controller
     {
         return view('admin.media-add');
     }
+    
 
     public function profile()
     {

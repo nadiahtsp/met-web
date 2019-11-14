@@ -28,8 +28,8 @@
                 </div>
 
                 <div class="form-group">
-                    <label>Link</label>
-                    <input type="text" name="link" class="form-control" placeholder="Link Portfolio ..">
+                    <label>Description</label>
+                    <textarea type="text" name="link" class="ckeditor" placeholder="Link Portfolio .."></textarea>
                     @if($errors->has('link'))
                     <div class="text-danger">
                         {{ $errors->first('link')}}

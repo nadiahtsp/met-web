@@ -19,7 +19,7 @@
                                     Portfolio
                                 </th>
                                 <th>
-                                    Link
+                                    Deskripsi
                                 </th>
                                 <th>
                                     Action
@@ -36,7 +36,7 @@
                                     {{ $p->nama }}
                                 </td>
                                 <td>
-                                    {{ $p->link }}
+                                    {!! $p->link !!}
                                 </td>
                                 <td>
                                     <div class="row">

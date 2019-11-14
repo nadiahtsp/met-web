@@ -6,7 +6,7 @@
 <div class="parallax-content-about baner-content-about" id="home">
     <div class="container">
         <div class="text-content">
-            <h2><em style="font-size:60px">About Us </em></h2>
+            <h2><em style="font-size:50px">About Us </em></h2>
             <!-- <p>Fast with Technology, Fast with MET</p> -->
             <!-- <div class="primary-white-button">
                         <a href="#" class="scroll-link" data-id="about">Let's Start</a>
@@ -69,7 +69,7 @@
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="service-item">
                             @foreach($client as $c)
-                            <img src="{{ asset('assets/img/'.$c->gambar) }}" style="width:15%;" alt="">
+                            <img src="{{ asset('assets/img/'.$c->gambar) }}" style="width:200px;" alt="">
                             @endforeach
                         </div>
                     </div>
@@ -92,11 +92,11 @@
                                 <h5>Location</h5>
                                 <br>
                                 <h6>Head Office</h6> <br>
-                                <p style="text-align:left;"> Jl. Suci Susukan Ciracas No.7, Rt9/Rw4, <br>kel.Sususkan, Kec.Ciracas, <br>Jakarta Timur 13750</p>
+                                <p style="text-align:left;"> {{$profil[1]->title}} <br>{{$profil[1]->content}} <br>{{$profil[1]->additional}}</p>
                                 <hr>
 
                                 <h6> Branch Office </h6><br>
-                                <p style="text-align:left;">Perumahan Taman Permata kav.8 Jl.H.Jeruk no.8<br> Kel. Rambutan, Kec.Ciracas,<br> Jakarta Timur 13830
+                                <p style="text-align:left;">{{$profil[2]->title}} <br>{{$profil[2]->content}} <br>{{$profil[2]->additional}}
                                 </p>
                             </div>
                         </div>
@@ -118,11 +118,9 @@
                             <div class="connect-us">
                                 <h5>Get Social with us</h5>
                                 <ul>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-google"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                    @foreach ($media as $m)
+                                <li><a href="{{$m->link}}"><i class="{{$m->logo}}"></i></a></li>
+                                @endforeach
                                 </ul>
                             </div>
                         </div>
@@ -166,16 +164,4 @@
             </div> -->
     </div>
 </div>
-<footer style="padding-top:10px !important;padding-bottom:30px">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-sm-12">
-                <div class="logo">
-                    <p>Copyright &copy; PT.MET
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
 @stop

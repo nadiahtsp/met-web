@@ -5,7 +5,7 @@
 <div class="parallax-content-about baner-content-about" id="home">
     <div class="container">
         <div class="text-content">
-            <h2><em style="font-size:60px">Our Works </em> </h2>
+            <h2><em style="font-size:50px">Our Works </em> </h2>
         </div>
     </div>
 </div>
@@ -13,55 +13,49 @@
     <div class="container">
         <div class="row">
             <div class="span12">
-            @foreach($portfolio as $p)
+                @foreach($portfolio as $p)
                 <div class="row">
                     <div class="col-lg-12 col-md-12">
                         <div class="work">
-                            <div class="hovereffect" style="width:40%">
-                                <img class="img-responsive" src="{{ asset('assets/img/'.$p->gambar) }}" alt="">
-                                <div class="overlay">
-                                    <h2>{{ $p->nama }}</h2>
-                                    <a class="info" href="{{ $p->link }}">link here</a>
-                                </div>
+                            <div class="hovereffect">
+                                <a data-toggle="modal" data-target="#modal-approve{{$p->id}}"><img src="{{ asset('assets/img/'.$p->gambar) }}" alt="">
+                                    <div class="overlay">
+                                        <h2>{{ $p->nama }}</h2>
+
+                                    </div>
                             </div>
                         </div>
                     </div>
-                    <!-- 
+
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <div class="hovereffect">
-                        <img class="img-responsive" src="{{ asset('assets/img/portfolio.jpg') }}" alt="">
-                        <div class="overlay">
-                            <h2>Hover effect 1</h2>
-                            <a class="info" href="#">link here</a>
+                @endforeach
+            </div>
+
+            @foreach($portfolio as $p)
+            <div class=" modal fade" data-toggle="" id="modal-approve{{$p->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <!-- Add .modal-dialog-centered to .modal-dialog to vertically center the modal -->
+                <div class="modal-dialog modal-dialog-centered" style="margin-top:200px;" role="document">
+
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">{{$p->nama}}</h5>
+                        </div>
+
+                        <div class="modal-body">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">Close</button>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <div class="hovereffect">
-                        <img class="img-responsive" src="{{ asset('assets/img/portfolio.jpg') }}" alt="">
-                        <div class="overlay">
-                            <h2>Hover effect 1</h2>
-                            <a class="info" href="#">link here</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <div class="hovereffect">
-                        <img class="img-responsive" src="{{ asset('assets/img/portfolio.jpg') }}" alt="">
-                        <div class="overlay">
-                            <h2>Hover effect 1</h2>
-                            <a class="info" href="#">link here</a>
-                        </div>
-                    </div>
-                </div> -->
 
                 </div>
             </div>
-            @endforeach
         </div>
+        @endforeach
+    </div>
 
-    </div><!-- end row -->
+</div><!-- end row -->
 
 </div><!-- end container -->
 @stop
@@ -71,25 +65,26 @@
 <footer>
     <div class="container">
         <div class="row">
-            <div class="col-md-9 col-sm-12">
+            <div class="col-md-8 col-sm-12">
                 <div class="location">
                     <h4>Location</h4>
                     <ul>
                         <li>
-                            <h6> Head Office</h6> <br>Jl. Suci Susukan Ciracas No.7, Rt9/Rw4, <br>kel.Sususkan, Kec.Ciracas, <br> Jakarta Timur 13750
+                            <h6> Head Office</h6> <br>{{$profil[1]->title}} <br>{{$profil[1]->content}} <br>{{$profil[1]->additional}}
                         </li>
                         <li>
-                            <h6>Branch Office</h6> <br>Perumahan Taman Permata kav.8 Jl.H.Jeruk no.8 <br>Kel. Rambutan, Kec.Ciracas, <br>Jakarta Timur 13830
+                            <h6>Branch Office</h6><br>{{$profil[2]->title}} <br>{{$profil[2]->content}} <br>{{$profil[2]->additional}}
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-12">
+            <div class="col-md-4 col-sm-12">
                 <div class="contact-info">
                     <h4>Contact</h4>
                     <ul>
-                        <li><em>Phone</em>: 021-22094511
-                            <br><em>Email</em>: met.id@outlook.com</li>
+                        <li><em>Phone</em>: {{$profil[3]->content}}
+                        <br><em>Fax</em>: +6221 87792645
+                            <br><em>Email</em>: {{$profil[4]->content}}</br>
                     </ul>
                 </div>
                 <div class="row">
@@ -97,11 +92,9 @@
                         <div class="connect-us">
                             <h5>Get Social with us</h5>
                             <ul>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google"></i></a></li>
-                                <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                @foreach ($media as $m)
+                                <li><a href="{{$m->link}}"><i class="{{$m->logo}}"></i></a></li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
