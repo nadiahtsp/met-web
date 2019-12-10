@@ -11,13 +11,13 @@
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th>
+                                <th style="text-align: center;">
                                     Name
                                 </th>
-                                <th>
+                                <th style="text-align: center;">
                                     Description
                                 </th>
-                                <th>
+                                <th style="text-align: center;">
                                     Action
                                 </th>
                             </tr>
@@ -33,11 +33,17 @@
                                 </td>
                                 <td style="text-align: center;">
                                     <div class="row">
+                                        <div class="col-md-2">
+
+                                        </div>
                                         <div class="col-md-4 button-form">
                                             <a href="/pilar-edit/{{ $pl->id }}" class="btn btn-outline-primary"><i class="fa fa-eye">Edit </i></a>
                                         </div>
                                         <div class="col-md-4">
                                             <a href="/pilar/hapus/{{ $pl->id }}" class="btn btn-outline-danger"><i class="fa fa-pencil">Delete</i></a>
+                                        </div>
+                                        <div class="col-md-2">
+
                                         </div>
                                     </div>
                                 </td>

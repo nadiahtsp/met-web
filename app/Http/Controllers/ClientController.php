@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Session;
 class ClientController extends Controller
 {
     public function update(Request $request)
@@ -12,12 +12,14 @@ class ClientController extends Controller
         $client = \App\Client::find($request->id);
         $client->nama = $request->nama;
         $client->save();
+        Session::flash('update','Updated Success');
         return redirect()->back();
     }
     public function delete($id)
     {
         $client = \App\Client::find($id);
         $client->delete();
+        Session::flash('delete','Deleted Success');
         return redirect('/client');
     }
     public function updatefoto(Request $request)
@@ -38,6 +40,7 @@ class ClientController extends Controller
         $request->gambar->move($tujuan_upload, $request->gambar->getClientOriginalName());
         // dd($tagline);
         $client->save();
+        Session::flash('update_foto','Updated Photo Success');
         return redirect()->back();
     }
     public function store(Request $request)
@@ -53,6 +56,7 @@ class ClientController extends Controller
             'nama' => $request->nama,
             'gambar' => $request->gambar
         ]);
+        Session::flash('add','Added Success');
         return redirect('/client');
     }
 }

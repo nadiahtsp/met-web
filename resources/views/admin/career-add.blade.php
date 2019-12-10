@@ -7,7 +7,7 @@
             <a href="/portfolio-admin" class="btn btn-primary">Back</a>
             <br />
             <br />
-
+            
             <form method="post" action="/career/store">
 
                 {{ csrf_field() }}

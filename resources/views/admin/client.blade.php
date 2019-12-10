@@ -34,6 +34,9 @@
                                 </td>
                                 <td style="text-align: center;">
                                     <div class="row">
+                                        <div class="col-md-2">
+
+                                        </div>
                                         <div class="col-md-4 button-form">
                                             <a href="/client-edit/{{ $c->id }}" class="btn btn-outline-primary"><i class="fa fa-eye">Edit </i></a>
                                         </div>
@@ -42,6 +45,9 @@
                                             </div> -->
                                         <div class="col-md-4">
                                             <a href="/client/hapus/{{ $c->id }}" class="btn btn-outline-danger"><i class="fa fa-pencil">Delete</i></a>
+                                        </div>
+                                        <div class="col-md-2">
+
                                         </div>
                                     </div>
                                 </td>

@@ -12,6 +12,12 @@
             <div class="row justify-content-center">
                 <div class="col-md-12 grid-margin stretch-card">
                     <div class="card">
+                        @if($message=Session::get('update_profil'))
+                        <div class="alert alert-success alert-block">
+                            <button type="button" class="close" data-dismiss="alert">x</button>
+                            <strong>{{$message}}</strong>
+                        </div>
+                        @endif
                         <div class="card-body">
                             <form class="forms-sample" action="{{url('/general/updateProfile')}}/{{$profile[1]->id}}" method="post">
                                 {{ csrf_field() }}
@@ -21,9 +27,9 @@
                                     <label for="exampleInputName1" style="margin-bottom:20px;">Head Office</label><br>
                                     <label>Address</label>
                                     <textarea style="height:100px;" type="text" class="form-control" id="exampleInputName1" name="title">{{$profile[1]->title}}</textarea>
-                                    <label>District & Sub-District</label>   
+                                    <label>District & Sub-District</label>
                                     <input type="text" class="form-control" rows="2" id="exampleInputName1" name="content" value="{{$profile[1]->content}}">
-                                    <label>City & Postal Code</label>   
+                                    <label>City & Postal Code</label>
                                     <input type="text" class="form-control" rows="2" id="exampleInputName1" name="additional" value="{{$profile[1]->additional}}">
                                 </div>
                                 <button type="submit" class="btn btn-success mr-2">Submit</button>
@@ -46,9 +52,9 @@
                                     <br>
                                     <label>Address</label>
                                     <textarea style="height:100px;" type="text" class="form-control" id="exampleInputName1" name="title">{{$profile[2]->title}}</textarea>
-                                    <label>District & Sub-District</label>   
+                                    <label>District & Sub-District</label>
                                     <input type="text" class="form-control" rows="2" id="exampleInputName1" name="content" value="{{$profile[2]->content}}">
-                                    <label>City & Postal Code</label>   
+                                    <label>City & Postal Code</label>
                                     <input type="text" class="form-control" rows="2" id="exampleInputName1" name="additional" value="{{$profile[2]->additional}}">
                                 </div>
                                 <button type="submit" class="btn btn-success mr-2">Submit</button>
@@ -99,6 +105,12 @@
             <div class="row justify-content-center">
                 <div class="col-md-12 grid-margin stretch-card">
                     <div class="card">
+                    @if($message=Session::get('update_profil_foto'))
+                        <div class="alert alert-success alert-block">
+                            <button type="button" class="close" data-dismiss="alert">x</button>
+                            <strong>{{$message}}</strong>
+                        </div>
+                        @endif
                         <div class="card-body">
                             <form class="forms-sample" action="{{url('/general/updateProfileFoto')}}/{{$profile[0]->id}}" method="post" enctype="multipart/form-data">
                                 {{ csrf_field() }}

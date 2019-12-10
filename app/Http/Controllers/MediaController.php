@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Session;
 class MediaController extends Controller
 {
     public function update(Request $request)
@@ -14,12 +14,14 @@ class MediaController extends Controller
         $media->link = $request->link;
         $media->logo = $request->logo;
         $media->save();
+        Session::flash('update','Updated Success');
         return redirect('/social-media');
     }
     public function delete($id)
     {
         $media = \App\Media::find($id);
         $media->delete();
+        Session::flash('delete','Deleted Success');
         return redirect('/social-media');
     }
     public function store(Request $request)
@@ -37,7 +39,7 @@ class MediaController extends Controller
             'link' => $request->link,
             'logo' => $request->logo
         ]);
-
+        Session::flash('add','Added Success');
         return redirect('/social-media');
     }
 }

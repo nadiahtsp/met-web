@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\General;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Database\Eloquent\Model;
 
 class GeneralController extends Controller
@@ -21,6 +22,7 @@ class GeneralController extends Controller
         $tagline->content = $request->content;
         // dd($tagline);
         $tagline->save();
+        Session::flash('update','Updated Success');
         return redirect('/home');
     }
 
@@ -41,6 +43,7 @@ class GeneralController extends Controller
         $request->gambar->move($tujuan_upload, $request->gambar->getClientOriginalName());
         // dd($tagline);
         $tagline->save();
+        Session::flash('update_foto','Updated Photo Success');
         return redirect('/home');
     }
 
@@ -51,6 +54,7 @@ class GeneralController extends Controller
         $history->content = $request->content;
         $history->save();
         // dd($tagline);
+        Session::flash('update_about','Updated Success');
         return redirect('/about-admin');
     }
 
@@ -70,6 +74,7 @@ class GeneralController extends Controller
         $request->gambar->move($tujuan_upload, $request->gambar->getClientOriginalName());
         $history->save();
         // dd($tagline);
+        Session::flash('update_about_foto','Updated Photo Success');
         return redirect('/about-admin');
     }
 
@@ -81,6 +86,7 @@ class GeneralController extends Controller
         $profile->additional = $request->additional;
         $profile->save();
         // dd($tagline);
+        Session::flash('update_profil','Updated Success');
         return redirect('/profile-met');
     }
 
@@ -100,6 +106,7 @@ class GeneralController extends Controller
         $request->gambar->move($tujuan_upload, $request->gambar->getClientOriginalName());
         $profile->save();
         // dd($tagline);
+        Session::flash('update_profil_foto','Updated Success');
         return redirect('/profile-met');
     }
 }

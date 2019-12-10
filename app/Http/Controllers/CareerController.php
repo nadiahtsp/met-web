@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\Session;
 
 use Illuminate\Http\Request;
 
@@ -13,12 +14,15 @@ class CareerController extends Controller
         $career->nama = $request->nama;
         $career->deskripsi = $request->deskripsi;
         $career->save();
+        Session::flash('update','Updated Success');
         return redirect()->back();
+
     }
     public function delete($id)
     {
         $career = \App\Career::find($id);
         $career->delete();
+        Session::flash('delete','Deleted Success');
         return redirect('/career-admin');
     }
     public function updatefoto(Request $request)
@@ -39,6 +43,7 @@ class CareerController extends Controller
         $request->gambar->move($tujuan_upload, $request->gambar->getClientOriginalName());
         // dd($tagline);
         $career->save();
+        Session::flash('update_foto','Updated Photo Success');
         return redirect()->back();
     }
     public function store(Request $request)
@@ -56,6 +61,7 @@ class CareerController extends Controller
             'deskripsi' => $request->deskripsi,
             'gambar' => $request->gambar
         ]);
+        Session::flash('add','Added Success');
         return redirect('/career-admin');
     }
 }

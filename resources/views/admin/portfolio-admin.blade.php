@@ -35,19 +35,17 @@
                                 <td>
                                     {{ $p->nama }}
                                 </td>
-                                <td>
+                                <td style="width:450px;  white-space:unset;">
                                     {!! $p->link !!}
                                 </td>
                                 <td>
                                     <div class="row">
-                                        <div class="row" style="text-align: center;}">
-                                            <div class="col-md-12 button-form">
+                                        <div class="row" style="text-align: center;width:200px;  white-space:unset;">
+                                            <div class="col-md-6 button-form">
                                                 <a href="/portfolio-edit/{{ $p->id }}" class="btn btn-outline-primary"><i class="fa fa-eye">Edit </i></a>
                                             </div>
-                                            <div class="col-md-12 button-form">
-                                                <a href="/portfolio-edit-photo/{{ $p->id }}" class="btn btn-inverse-dark btn-fw"><i class="fa fa-eye">Change Photo</i></a>
-                                            </div>
-                                            <div class="col-md-12">
+                                           
+                                            <div class="col-md-6">
                                                 <a href="/portfolio/hapus/{{ $p->id }}" class="btn btn-outline-danger"><i class="fa fa-pencil">Delete</i></a>
                                             </div>
                                         </div>

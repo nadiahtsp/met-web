@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Session;
 class PilarController extends Controller
 {
     public function update(Request $request)
@@ -13,12 +13,14 @@ class PilarController extends Controller
         $pilar->nama = $request->nama;
         $pilar->deskripsi = $request->deskripsi;
         $pilar->save();
+        Session::flash('update','Updated Success');
         return redirect('/pillar');
     }
     public function delete($id)
     {
         $pilar = \App\Pilar::find($id);
         $pilar->delete();
+        Session::flash('delete','Deleted Success');
         return redirect('/pillar');
     }
     public function updatefoto(Request $request)
@@ -54,7 +56,7 @@ class PilarController extends Controller
             'nama' => $request->nama,
             'deskripsi' => $request->deskripsi 
         ]);
-       
+        Session::flash('add','Added Success');
         return redirect('/pillar');
     }
 }

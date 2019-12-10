@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Session;
 class PortfolioController extends Controller
 {
     public function update(Request $request)
@@ -13,12 +13,14 @@ class PortfolioController extends Controller
         $portfolio->nama = $request->nama;
         $portfolio->link = $request->link;
         $portfolio->save();
+        Session::flash('update','Updated Success');
         return redirect('/portfolio-admin');
     }
     public function delete($id)
     {
         $portfolio = \App\Portfolio::find($id);
         $portfolio->delete();
+        Session::flash('delete','Deleted Success');
         return redirect('/portfolio-admin');
     }
     public function updatefoto(Request $request)
@@ -39,6 +41,7 @@ class PortfolioController extends Controller
         $request->gambar->move($tujuan_upload, $request->gambar->getClientOriginalName());
         // dd($tagline);
         $portfolio->save();
+        Session::flash('update_foto','Updated Photo Success');
         return redirect('/portfolio-admin');
     }
     public function store(Request $request)
@@ -56,6 +59,7 @@ class PortfolioController extends Controller
             'link' => $request->link,
             'gambar' => $request->gambar
         ]);
+        Session::flash('add','Added Success');
         return redirect('/portfolio-admin');
     }
 }

@@ -11,7 +11,7 @@ http://www.templatemo.com/tm-506-tinker
     <title>@yield('title')</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="shortcut icon" href="{{asset('assets/logo/logo_ET.png')}}" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
 
@@ -45,7 +45,7 @@ http://www.templatemo.com/tm-506-tinker
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="{{url('/')}}" class="navbar-brand" style="padding: 18px 0px" >
+                    <a href="{{url('/')}}" class="navbar-brand" style="padding: 18px 0px">
                         <img src="{{asset('assets/img/'.$profil[0]->gambar)}}" style="height:45px;" alt="">
                     </a>
                 </div>
