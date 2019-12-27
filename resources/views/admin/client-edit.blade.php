@@ -4,6 +4,12 @@
 <div class="content-wrapper">
     <div class="row">
         <div class="container">
+            @if($message=Session::get('update'))
+            <div class="alert alert-success alert-block">
+                <button type="button" class="close" data-dismiss="alert">x</button>
+                <strong>{{$message}}</strong>
+            </div>
+            @endif
             <div class="card-body">
                 <a href="/client" class="btn btn-primary">Back</a>
                 <br />
@@ -32,6 +38,12 @@
                 <div class="row justify-content-center">
                     <div class="col-md-12 grid-margin stretch-card">
                         <div class="card">
+                        @if($message=Session::get('update_foto'))
+            <div class="alert alert-success alert-block">
+                <button type="button" class="close" data-dismiss="alert">x</button>
+                <strong>{{$message}}</strong>
+            </div>
+            @endif
                             <div class="card-body">
                                 <h4 class="card-title">Client Edit Photo</h4>
                                 <p class="card-description">

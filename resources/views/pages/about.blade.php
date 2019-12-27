@@ -46,14 +46,14 @@
                     </div>
                     @foreach($pilar as $pl)
                     <div class="col-md-2 col-sm-6 col-xs-12">
-                   
+
                         <div class="service-item">
                             <div class="icon">
                                 <p>{{ $pl->nama }}</p>
                             </div>
                             <h4>{{ $pl->deskripsi }}</h4>
                         </div>
-                       
+
                     </div>
                     @endforeach
                     <div class="col-md-1">
@@ -109,7 +109,7 @@
                                                     3. Click "Share" and choose "Embed map" tab
                                                     4. Copy only URL and paste it within the src="" field below
                                                 -->
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7895.485196115994!2d103.85995441789784!3d1.2880401763270322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7fb4e58ad9cd826e!2sSingapore+Flyer!5e0!3m2!1sen!2sth!4v1505825620371" width="100%" height="320" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.4376096403333!2d106.87338382916519!3d-6.2964906667001665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTcnNDcuNCJTIDEwNsKwNTInMjYuMiJF!5e0!3m2!1sid!2sid!4v1576459657230!5m2!1sid!2sid" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                             </div>
                         </div>
                     </div>
@@ -119,9 +119,17 @@
                                 <h5>Get Social with us</h5>
                                 <ul>
                                     @foreach ($media as $m)
-                                <li><a href="{{$m->link}}"><i class="{{$m->logo}}"></i></a></li>
-                                @endforeach
+                                    <li><a href="{{$m->link}}"><i class="{{$m->logo}}"></i></a></li>
+                                    @endforeach
                                 </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 ">
+                            <div class="logo">
+                                <p>Copyright &copy; PT.MET
                             </div>
                         </div>
                     </div>

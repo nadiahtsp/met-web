@@ -7,6 +7,12 @@
             <div class="row justify-content-center">
                 <div class="col-md-12 grid-margin stretch-card">
                     <div class="card">
+                        @if($message=Session::get('update'))
+                        <div class="alert alert-success alert-block">
+                            <button type="button" class="close" data-dismiss="alert">x</button>
+                            <strong>{{$message}}</strong>
+                        </div>
+                        @endif
                         <div class="card-body">
                             <h4 class="card-title">Tagline</h4>
                             <!-- <p class="card-description">
@@ -38,6 +44,12 @@
             <div class="row justify-content-center">
                 <div class="col-md-12 grid-margin stretch-card">
                     <div class="card">
+                        @if($message=Session::get('update_foto'))
+                        <div class="alert alert-success alert-block">
+                            <button type="button" class="close" data-dismiss="alert">x</button>
+                            <strong>{{$message}}</strong>
+                        </div>
+                        @endif
                         <div class="card-body">
                             <h4 class="card-title">About Us</h4>
                             <p class="card-description">
@@ -60,6 +72,7 @@
 
                             <div class="col-md-12 grid-margin stretch-card">
                                 <div class="card">
+
                                     <p class="card-description">
                                     </p>
                                     <form class="forms-sample" method="post" action="{{url('/general/updateFoto')}}/{{$tagline[0]->id}}" enctype="multipart/form-data">

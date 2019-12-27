@@ -63,43 +63,23 @@
                         </div>
                    </div> -->
                 <div class="row">
-                    @foreach($portfolio as $p)
-                    <div class="col-lg-12 col-md-12 width:300px;">
-
+                @foreach($portfolio as $p)
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
                         <div class="work">
                             <div class="hovereffect">
-                                <a data-toggle="modal" data-target="#modal-approve{{$p->id}}"> <img class="img-responsive" src="{{asset('assets/img/'.$p->gambar) }}">
+                                <a href="/portfolio-page/{{$p->id}}"><img src="{{ asset('assets/img/'.$p->gambar) }}" alt="">
                                     <div class="overlay">
-                                        <h2>{{$p->nama}}</h2>
+                                        <h2>{{ $p->nama }}</h2>
+
                                     </div>
+                                </a>
                             </div>
                         </div>
-
                     </div>
-                    @endforeach
+
                 </div>
-                @foreach($portfolio as $p)
-        <div class=" modal fade" data-toggle="" id="modal-approve{{$p->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                                <!-- Add .modal-dialog-centered to .modal-dialog to vertically center the modal -->
-                                <div class="modal-dialog modal-dialog-centered" style="margin-top:200px;" role="document">
-
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLongTitle">{{$p->nama}}</h5>
-                                        </div>
-
-                                        <div class="modal-body">
-                                           
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-primary">Close</button>
-                                        </div>
-                                    </div>
-
-                                </div>
-                        </div>
-                    </div>
-                    @endforeach
+                @endforeach
             </div>
             <div class="row" style="text-align:center;">
                 <div class="col-md-12">
@@ -256,7 +236,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 </footer>
 @stop

@@ -43,6 +43,7 @@ Route::get('/portfolio', 'PagesController@portfolio');
 Route::get('/service', 'PagesController@service');
 Route::get('/carrer', 'PagesController@carrer');
 Route::get('/blog', 'PagesController@blog');
+Route::get('/portfolio-page/{id}', 'PagesController@portfolioPages');
 
 // Just for testing in old file
 Route::get('/index-copy', function () {

@@ -163,6 +163,7 @@
             </a>
           </li>
         </ul>
+        
       </nav>
       <!-- partial -->
       <div class="main-panel">
@@ -201,7 +202,7 @@
   <script src="{{asset('assets/vendors/js/misc.js')}}"></script>
   <!-- <script src="https://cdn.ckeditor.com/ckeditor5/12.4.0/classic/ckeditor.js"></script> -->
   <script type="text/javascript" src="{{ asset('assets/ckeditor/ckeditor.js') }}"></script>
- 
+
   <!-- endinject -->
   <!-- Custom js for this page-->
   <script src="{{asset('assets/vendors/js/dashboard.js')}}"></script>

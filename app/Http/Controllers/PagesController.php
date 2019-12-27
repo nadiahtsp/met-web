@@ -77,6 +77,17 @@ class PagesController extends Controller
             'media' => $media
         ]);
     }
+    public function portfolioPages($id)
+    {
+        $profil = \App\General::whereIn('id', [4, 5, 6, 7, 8])->get();
+        $portfolio_page = \App\Portfolio::find($id);
+        $media = \App\Media::all();
+        return view('pages.portfolio_page', [
+            'portfolio_page' => $portfolio_page,
+            'profil' => $profil,
+            'media' => $media
+        ]);
+    }
     public function blog()
     {
         return view("pages.blog");

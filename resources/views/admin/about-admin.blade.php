@@ -7,6 +7,17 @@
             <div class="row justify-content-center">
                 <div class="col-md-12 grid-margin stretch-card">
                     <div class="card">
+                        @if($message=Session::get('update_about'))
+                        <div class="alert alert-success alert-block">
+                            <button type="button" class="close" data-dismiss="alert">x</button>
+                            <strong>{{$message}}</strong>
+                        </div>
+                        @elseif($message=Session::get('update_about_foto'))
+                        <div class="alert alert-success alert-block">
+                            <button type="button" class="close" data-dismiss="alert">x</button>
+                            <strong>{{$message}}</strong>
+                        </div>
+                        @endif
                         <div class="card-body">
                             <h4 class="card-title">About MET</h4>
                             <p class="card-description">
@@ -24,7 +35,7 @@
                                     <textarea style="height:100px;" type="text" class="form-control" rows="2" id="exampleInputName1" name="content">{{$history[0]->content}}</textarea>
                                 </div>
                                 <button type="submit" class="btn btn-success mr-2">Save</button>
-                                
+
                             </form>
 
 
@@ -44,7 +55,7 @@
                                         </div>
 
                                         <button type="submit" class="btn btn-success mr-2">Save</button>
-                                        
+
                                     </form>
                                 </div>
                             </div>
